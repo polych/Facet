@@ -1,0 +1,83 @@
+.p_20{
+    padding: 15px;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    padding-left: 150px;
+}
+.page_wraper{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba($color: #212121, $alpha: 0.5);
+        box-sizing: border-box;
+        z-index: 1;
+    }
+}
+
+.page_wraper_content{
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-left: 100px;
+    padding-top: 60px;
+    pre{
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+    }
+}
+.right_content{
+    border-radius: 50%;
+    background-color: rgba($color: #FFF5F5, $alpha: 0.65);
+    width: 470px;
+    height: 470px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right_content_wrap{
+    position: absolute;
+    right: 120px;
+    top: 15vh;
+    z-index: 5;
+    .big_btn{
+        position: absolute;
+        right: -100px;
+        top: -20px;
+    }
+}
+.left_content{
+    width: 50%;
+    max-height: calc(100% - 250px);
+    overflow-y: scroll;
+    position: relative;
+    z-index: 5;
+}
+
+.about_right_img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}

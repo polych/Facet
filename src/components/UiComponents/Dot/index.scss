@@ -1,0 +1,27 @@
+.dot{
+    width: 10px;
+    height: 10px;
+    background: #FF6D6D;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 20px;
+    transition: all 0.2s linear;
+    &_wrap{
+        width: 33px;
+        height: 33px;
+    }
+    &:after{
+        content:"";
+        position: absolute;
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background: #FF6D6D;
+        opacity: 0.1;
+        transition: all 0.2s linear;
+    }
+}

@@ -1,0 +1,64 @@
+// vars
+    // colors
+$line_color: rgba(33, 33, 33,0.4);
+$text_color:#212121;
+$btn_color:#333333;
+$btn_color_2:#FFF5F5;
+$border_color:#FF6D6D;
+
+$border: 1px dashed $border_color;
+
+@keyframes round_border {
+    0% {
+      transform: translate(-50%,-50%) rotate(0);
+    }
+  
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+  }
+
+// mixins
+
+@mixin  vertical_line {
+        background-color:$line_color;
+        width: 1px;
+        position: absolute;
+}
+@mixin  horizontal_line {
+    height:1px;
+    background-color:$line_color;
+    position: absolute;
+}
+@mixin round_btn {
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    &:hover{
+        @include hover_border;
+        &:after{
+           border-radius: 50%;
+        }
+    }
+}
+@mixin hover_border {
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        border: $border;
+        // animation-duration: 6s;
+        // animation-name: round_border;
+        // animation-iteration-count: infinite;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,26 @@
+@import '../../../static/styles/mixins&vars';
+.big_btn{
+    @include round_btn;
+    background-color: $btn_color;
+    color: #fff;
+    width: 175px;
+    height: 175px;
+    &:after{
+        border-width:2px !important;
+    }
+}
+.sm_btn{
+    @include round_btn;
+    background-color: $btn_color_2;
+    color: $text_color;
+    width: 85px;
+    height: 85px;
+}
+@media(max-width:1439.9px){
+   .big_btn{
+       width: 120px;
+       height: 120px;
+       font-size: 14px;
+     
+   } 
+}

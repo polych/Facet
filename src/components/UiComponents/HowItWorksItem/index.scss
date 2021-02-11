@@ -1,0 +1,15 @@
+.how_it_works_item{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    height:150px;
+    width: 150px;
+    border: 1px solid #333;
+    font-size: 12px;
+    border-radius: 50%;
+    span{
+        color: #FF6D6D;
+    }
+}

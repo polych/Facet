@@ -1,0 +1,16 @@
+@import '../../../static/styles/mixins&vars';
+.logo{
+    @include round_btn;
+    position: absolute !important;
+    left: 40px;
+    top: 40px;
+    background-color: #333;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    z-index: 5;
+    cursor: pointer;
+    &:hover{
+        @include hover_border;
+    }
+}

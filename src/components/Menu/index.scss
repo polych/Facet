@@ -1,0 +1,56 @@
+@import '../../static/styles/mixins&vars';
+.menu{
+    position: absolute;
+    right: 90px;
+    bottom: 10px;
+    transform: rotate(-45deg);
+    background-color: #fff;
+    z-index: 10;
+    &:after{
+        background-color: #fff;
+        content: '';
+        width: 2000px;
+        left: 50%;
+        transform: translate(-50%,0);
+        position: absolute;
+        top: 0;
+        height: 1001px;
+        z-index: 4;
+    }
+    li{
+        position: relative;
+        z-index: 20;
+            &:after{
+                content: '';
+                width: 2000px;
+                border-top: 1px solid #ACACAC;
+                left: 50%;
+                transform: translate(-50%,0);
+                position: absolute;
+                top: 0;
+                z-index: 3;
+            }
+        
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 1px;
+        padding-top: 30px;
+        button{
+            padding: 15px 30px;
+            position: relative;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+            border: 1px dashed transparent;
+            z-index: 5;
+            color: #868686;
+            cursor: pointer;
+            &:hover{
+                border: $border;
+                color: #212121;
+            }
+        }
+    }
+}

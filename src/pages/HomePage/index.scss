@@ -1,0 +1,14 @@
+.home_left{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3,p{
+        padding-left: 50px;
+    }
+    h3{
+        margin-top: 25px;
+        margin-bottom: 5px;
+    }
+    
+}

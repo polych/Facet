@@ -1,0 +1,95 @@
+@import './reset';
+@import './mixins&vars';
+
+@font-face {
+    font-family: "Comfortaa', sans-serif";
+    src: local("Comfortaa"),
+      url("../fonts/Comfortaa/Comfortaa-Regular.ttf") format("truetype");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "Comfortaa', sans-serif";
+    src: local("Comfortaa"),
+      url("../fonts/Comfortaa/Comfortaa-Medium.ttf") format("truetype");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Comfortaa', sans-serif";
+    src: local("Comfortaa"),
+      url("../fonts/Comfortaa/Comfortaa-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "Comfortaa', sans-serif";
+    src: local("Comfortaa"),
+      url("../fonts/Comfortaa/Comfortaa-Bold.ttf") format("truetype");
+    font-weight: bold;
+  }
+  body{
+    font-family: "Comfortaa', sans-serif";
+    line-height: 150%;
+    font-size: 14px;
+    font-weight: normal;
+    color: $text_color;
+    *{
+      font-family: "Comfortaa', sans-serif";
+      font-weight: normal;
+    }
+}
+h1{
+    font-size: 65px;
+    line-height: 130%;
+}
+h2{
+    font-size: 60px;
+    line-height: 130%;
+}
+h3{
+    font-size: 35px;
+    line-height: 130%; 
+}
+h4{
+    font-size: 26px;
+    line-height: 130%;
+}
+h5{
+    font-size: 20px;
+    line-height: 130%;
+}
+.vertical_line{
+   @include vertical_line;
+}
+.horizontal_line{
+    @include horizontal_line;
+    width: 100%
+}
+.line_45{
+    @include horizontal_line;
+    transform: rotate(-45deg);
+    width: 100%
+}
+.list_style{
+  li{
+    position: relative;
+    padding-left: 35px ;
+    font-weight: bold;
+    margin-bottom: 25px;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #FFF5F5;
+    }
+  }
+}
+.btn_1{
+  @include round_btn;
+  &:after{
+    border-width: 2px !important;
+  }
+}
+@import './media';
