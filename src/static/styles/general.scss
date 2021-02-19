@@ -31,6 +31,7 @@
     font-size: 14px;
     font-weight: normal;
     color: $text_color;
+    overflow: hidden;
     *{
       font-family: "Comfortaa', sans-serif";
       font-weight: normal;
@@ -92,4 +93,13 @@ h5{
     border-width: 2px !important;
   }
 }
+.triangle{
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 11px solid #FF6D6D;
+  transition: all 0.3s ease-in-out;
+}
+
 @import './media';

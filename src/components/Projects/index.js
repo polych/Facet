@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
 import ProjBtn from "../UiComponents/ProjBtn";
-import Scene2 from "../Scene/index2";
+import Scene from "../Scene";
 
 const Projects = () => {
   var pr = [];
@@ -10,7 +10,7 @@ const Projects = () => {
   }
   return (
     <div className="projects_list">
-      <Scene2 />
+      <Scene />
     </div>
   );
 };

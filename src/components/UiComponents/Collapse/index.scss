@@ -1,0 +1,33 @@
+.collapse{
+    &_title{
+        padding:  6px 0;
+        border-bottom: 3px solid #F8F8F8;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 2px;
+        cursor: pointer;
+        p{
+            font-weight: bold;
+        }
+    }
+    &_content{
+        padding-top: 5px;
+        padding-bottom: 0px;
+        height: 0px;
+        overflow: hidden;
+        transition: all 0.1s ease-in-out;
+    }
+}
+.collapse_active{
+    .collapse_title{
+        .triangle{
+            transform: rotate(-180deg);
+        }
+    }
+    .collapse_content{
+        padding-top: 15px;
+        padding-bottom: 30px;
+        height: auto;
+    }   
+}

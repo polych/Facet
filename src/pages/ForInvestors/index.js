@@ -148,7 +148,7 @@ const RightContent = () => (
   <button className="btn_1">Send us your application</button>
 );
 const forInvestors = {
-  pageTitle: "FOR investors",
+  pageTitle: "FOR INVESTORS",
   leftContent: <LeftContent />,
   rightContent: <RightContent />,
 };

@@ -1,0 +1,2 @@
+export const CHANGE_LP_PAGE = "CHANGE_LP_PAGE";
+export const SET_WINDOW_WIDTH = "SET_WINDOW_WIDTH";

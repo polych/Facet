@@ -53,7 +53,7 @@ const ballPool = (scene) => {
     },
   ];
   let balls = [];
-  for (let index = 0; index < 20; index++) {
+  for (let index = 0; index < 15; index++) {
     balls.push(Bodies.circle(...ballConfig));
   }
   balls.forEach((el, index) => (el.val = `value of ball ${index}`));
@@ -75,7 +75,7 @@ const ballPool = (scene) => {
       wallConfig
     ),
     Bodies.rectangle(wrapWidth, wrapHeight / 2, 20, wrapHeight, wallConfig),
-    Bodies.rectangle(0, wrapHeight / 2, 40, wrapHeight, wallConfig),
+    Bodies.rectangle(0, wrapHeight / 2, 5, wrapHeight, wallConfig),
     Bodies.rectangle(wrapWidth - 170, wrapHeight - 420, 2000, 40, {
       isStatic: true,
       angle: -Math.PI * 0.248,

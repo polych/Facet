@@ -47,7 +47,7 @@
             z-index: 5;
             color: #868686;
             cursor: pointer;
-            &:hover{
+            &:hover,&.active_link{
                 border: $border;
                 color: #212121;
             }

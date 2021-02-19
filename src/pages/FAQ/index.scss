@@ -1,0 +1,36 @@
+@import '../../static/styles/mixins&vars';
+
+.chart_info{
+    padding-left: 60px;
+    margin: 30px 0;
+    li{
+        display: flex;
+        align-items: center;
+        margin-bottom: 14px;
+        span{
+            margin-left: 10px;
+        }
+    }
+}
+.circle_1{
+    @include circle;
+    background-color:#FF6D6D;
+}
+.circle_2{
+    @include circle;
+    background-color:#99ED66;
+}
+.circle_3{
+    @include circle;
+    background-color:#EE0E0E;
+}
+.circle_4{
+    @include circle;
+    background-color:#59BAE3;
+}
+.grey{
+    color: #808080;
+}
+.faq{
+    margin-top: 50px;
+}

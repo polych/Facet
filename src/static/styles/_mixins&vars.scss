@@ -62,3 +62,8 @@ $border: 1px dashed $border_color;
         border-radius: 50%;
     }
 }
+@mixin  circle{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
