@@ -41,11 +41,17 @@ const LandingPage = () => {
   const debounced = useDebouncedCallback(updateScroll, 50);
 
   useEffect(() => {
+    let event;
+    if (window.innerWidth >= 1200) {
+      event = "wheel";
+    } else {
+      event = "touchmove";
+    }
     const block = ref.current;
     if (ref) {
-      block.addEventListener("wheel", debounced.callback);
+      block.addEventListener(event, debounced.callback);
     }
-    return () => block.removeEventListener("wheel", debounced.callback);
+    return () => block.removeEventListener(event, debounced.callback);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (

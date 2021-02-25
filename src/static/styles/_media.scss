@@ -128,8 +128,8 @@
     }
 }
 .dot{
-    width: 7px;
-    height: 7px;
+    width: 8px;
+    height: 8px;
     &_wrap{
         width: 25px;
         height: 30px;
@@ -203,11 +203,12 @@
     }
     .how_works_block .dot_wrap{
         margin-bottom: 5px;
-        width: 15px;
+        width: 30px;
         height: 20px;
     }
     .for_creators_page{
         .react-tabs__tab-list li{
+            font-size: 14px;
             &:nth-child(1){
                 order: 1;
             } 
@@ -225,6 +226,7 @@
     }
     .for_investors_page{
         .react-tabs__tab-list li{
+            font-size: 14px;
             &:nth-child(1){
                 order: 1;
             } 
@@ -248,5 +250,10 @@
             }
         }
 
+    }
+    .menu{
+        li{
+            padding-left: 10px;
+        }
     }
 }

@@ -1,8 +1,8 @@
 import { CHANGE_LP_PAGE, MENU_STATE, SHOW_PROJECTS } from "../constans";
 const initState = {
-  lpPage: 3,
+  lpPage: 4,
   menu: false,
-  projectSection: true,
+  projectSection: false,
 };
 const generalReducer = (state = initState, action) => {
   switch (action.type) {

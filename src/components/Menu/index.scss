@@ -49,6 +49,7 @@
             cursor: pointer;
             &:hover,&.active_link{
                 border: $border;
+                border-width: 1px;
                 color: #212121;
             }
         }
