@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Facet/static/css/main.367d70ed.chunk.css",
+    "main.js": "/Facet/static/js/main.49a48f7c.chunk.js",
+    "main.js.map": "/Facet/static/js/main.49a48f7c.chunk.js.map",
+    "runtime-main.js": "/Facet/static/js/runtime-main.de4de0f9.js",
+    "runtime-main.js.map": "/Facet/static/js/runtime-main.de4de0f9.js.map",
+    "static/js/2.f3436a6e.chunk.js": "/Facet/static/js/2.f3436a6e.chunk.js",
+    "static/js/2.f3436a6e.chunk.js.map": "/Facet/static/js/2.f3436a6e.chunk.js.map",
+    "index.html": "/Facet/index.html",
+    "precache-manifest.9cf0b680600c7e5ce68029d4b75221a3.js": "/Facet/precache-manifest.9cf0b680600c7e5ce68029d4b75221a3.js",
+    "service-worker.js": "/Facet/service-worker.js",
+    "static/css/main.367d70ed.chunk.css.map": "/Facet/static/css/main.367d70ed.chunk.css.map",
+    "static/js/2.f3436a6e.chunk.js.LICENSE.txt": "/Facet/static/js/2.f3436a6e.chunk.js.LICENSE.txt",
+    "static/media/general.scss": "/Facet/static/media/Comfortaa-SemiBold.d905de65.ttf",
+    "static/media/a.svg": "/Facet/static/media/a.93bf8ed0.svg",
+    "static/media/chart.svg": "/Facet/static/media/chart.581836db.svg",
+    "static/media/chart2.svg": "/Facet/static/media/chart2.a00be1d8.svg",
+    "static/media/photo.png": "/Facet/static/media/photo.4de81049.png",
+    "static/media/table.svg": "/Facet/static/media/table.083106e9.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de4de0f9.js",
+    "static/js/2.f3436a6e.chunk.js",
+    "static/css/main.367d70ed.chunk.css",
+    "static/js/main.49a48f7c.chunk.js"
+  ]
+}
