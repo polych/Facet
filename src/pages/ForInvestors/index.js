@@ -151,5 +151,6 @@ const forInvestors = {
   pageTitle: "FOR INVESTORS",
   leftContent: <LeftContent />,
   rightContent: <RightContent />,
+  pageClass: "for_investors_page",
 };
 export default forInvestors;

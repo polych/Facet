@@ -13,7 +13,7 @@ const landingPages = [
   HowItWorks,
   forCreators,
   forInvestors,
-  faqs
+  faqs,
 ];
 
 export default landingPages;

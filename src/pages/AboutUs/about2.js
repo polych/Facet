@@ -35,5 +35,6 @@ const about2 = {
   pageTitle: "ABOUT US",
   leftContent: <LeftContent />,
   rightContent: <AboutRight />,
+  pageClass: "about_us_2",
 };
 export default about2;

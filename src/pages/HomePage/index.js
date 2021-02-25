@@ -26,6 +26,7 @@ const homePage = {
   pageTitle: "PLATFORM",
   leftContent: <LeftContent />,
   rightContent: <RightContent />,
+  pageClass: "home_page",
 };
 
 export default homePage;

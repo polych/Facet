@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { v4 } from "uuid";
-import { changeLpPage } from "../../store/actions/generalAction";
+import { changeLpPage, menuAction } from "../../store/actions/generalAction";
 import "./index.scss";
 const menuItems = [
   {
@@ -9,11 +9,11 @@ const menuItems = [
     value: 1,
   },
   {
-    label: "for investors",
+    label: "for creators",
     value: 4,
   },
   {
-    label: "for creators",
+    label: "for investors",
     value: 5,
   },
   {
@@ -24,14 +24,15 @@ const menuItems = [
 
 const Menu = () => {
   const dispatch = useDispatch();
-  const page = useSelector((state) => state.general.lpPage);
+  const { lpPage, menu } = useSelector((state) => state.general);
   const handleClick = (value) => () => {
     dispatch(changeLpPage(value));
+    dispatch(menuAction(false));
   };
   const activeState = (value) =>
-    page === value || (page === 2 && value === 1) ? "active_link" : "";
+    lpPage === value || (lpPage === 2 && value === 1) ? "active_link" : "";
   return (
-    <ul className="menu">
+    <ul className={`menu ${menu ? "menu_active" : ""}`}>
       {menuItems.map(({ label, value }) => (
         <li key={v4()}>
           <button

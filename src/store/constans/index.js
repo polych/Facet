@@ -1,2 +1,4 @@
 export const CHANGE_LP_PAGE = "CHANGE_LP_PAGE";
 export const SET_WINDOW_WIDTH = "SET_WINDOW_WIDTH";
+export const MENU_STATE = "MENU_STATE";
+export const SHOW_PROJECTS = "SHOW_PROJECTS";

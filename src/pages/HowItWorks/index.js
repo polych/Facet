@@ -95,6 +95,7 @@ const HowItWorks = () => {
 const index = {
   leftContent: <HowItWorks />,
   pageTitle: "HOW IT WORKS",
+  pageClass: "how_works_page",
 };
 
 export default index;

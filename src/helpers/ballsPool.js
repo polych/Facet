@@ -2,10 +2,65 @@ import Matter from "matter-js";
 import a from "../static/images/a.svg";
 
 const ballPool = (scene) => {
-  // const windowWidth = window.innerWidth;
+  const windowWidth = window.innerWidth;
   const wrapWidth = scene.current.offsetWidth;
   const wrapHeight = scene.current.offsetHeight;
-
+  let menuWidth;
+  let balRes;
+  let ballApear;
+  if (windowWidth >= 1399) {
+    menuWidth = 410;
+  } else {
+    menuWidth = 175;
+  }
+  if (windowWidth >= 1200) {
+    balRes = 0.5;
+  } else {
+    balRes = 0.1;
+  }
+  if (windowWidth < 576) {
+    ballApear = wrapWidth / 2;
+  } else {
+    ballApear = wrapWidth / 2 - 200;
+  }
+  const wall = () => {
+    if (windowWidth >= 768) {
+      return [
+        // walls
+        Bodies.rectangle(wrapWidth / 2, 1, wrapWidth, 5, wallConfig),
+        Bodies.rectangle(
+          wrapWidth / 2,
+          wrapHeight - 15,
+          wrapWidth,
+          100,
+          wallConfig
+        ),
+        Bodies.rectangle(wrapWidth, wrapHeight / 2, 20, wrapHeight, wallConfig),
+        Bodies.rectangle(0, wrapHeight / 2, 5, wrapHeight, wallConfig),
+        Bodies.rectangle(wrapWidth - 170, wrapHeight - menuWidth, 2000, 40, {
+          isStatic: true,
+          angle: -Math.PI * 0.248,
+          render: {
+            fillStyle: "transparent",
+          },
+        }),
+      ];
+    } else {
+      return [
+        // walls
+        Bodies.rectangle(wrapWidth / 2, 1, wrapWidth, 5, wallConfig),
+        Bodies.rectangle(
+          wrapWidth / 2,
+          wrapHeight - 15,
+          wrapWidth,
+          100,
+          wallConfig
+        ),
+        Bodies.rectangle(wrapWidth, wrapHeight / 2, 20, wrapHeight, wallConfig),
+        Bodies.rectangle(0, wrapHeight / 2, 5, wrapHeight, wallConfig),
+      ];
+    }
+  };
   const Engine = Matter.Engine,
     Render = Matter.Render,
     World = Matter.World,
@@ -40,11 +95,11 @@ const ballPool = (scene) => {
   //   },
   // ];
   const ballConfig = [
-    wrapWidth / 2 - 200,
+    ballApear,
     wrapHeight - 160,
     40,
     {
-      restitution: 0.5,
+      restitution: balRes,
       render: {
         sprite: {
           texture: a,
@@ -64,26 +119,7 @@ const ballPool = (scene) => {
       fillStyle: "transparent",
     },
   };
-  World.add(engine.world, [
-    // walls
-    Bodies.rectangle(wrapWidth / 2, 1, wrapWidth, 5, wallConfig),
-    Bodies.rectangle(
-      wrapWidth / 2,
-      wrapHeight - 15,
-      wrapWidth,
-      100,
-      wallConfig
-    ),
-    Bodies.rectangle(wrapWidth, wrapHeight / 2, 20, wrapHeight, wallConfig),
-    Bodies.rectangle(0, wrapHeight / 2, 5, wrapHeight, wallConfig),
-    Bodies.rectangle(wrapWidth - 170, wrapHeight - 420, 2000, 40, {
-      isStatic: true,
-      angle: -Math.PI * 0.248,
-      render: {
-        fillStyle: "transparent",
-      },
-    }),
-  ]);
+  World.add(engine.world, wall());
   World.add(engine.world, balls);
   // add mouse control
   const mouse = Mouse.create(render.canvas),

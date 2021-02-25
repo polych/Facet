@@ -138,5 +138,6 @@ const LeftContent = () => {
 const faqs = {
   pageTitle: "FAQs",
   leftContent: <LeftContent />,
+  pageClass: "faq_page",
 };
 export default faqs;

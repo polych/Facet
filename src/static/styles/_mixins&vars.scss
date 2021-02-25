@@ -6,7 +6,7 @@ $btn_color:#333333;
 $btn_color_2:#FFF5F5;
 $border_color:#FF6D6D;
 
-$border: 1px dashed $border_color;
+$border: 2px dashed $border_color;
 
 @keyframes round_border {
     0% {
@@ -59,6 +59,7 @@ $border: 1px dashed $border_color;
         // animation-duration: 6s;
         // animation-name: round_border;
         // animation-iteration-count: infinite;
+        // animation-timing-function: linear;
         border-radius: 50%;
     }
 }

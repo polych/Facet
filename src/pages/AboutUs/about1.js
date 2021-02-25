@@ -33,5 +33,6 @@ const LeftContent = () => {
 const about1 = {
   pageTitle: "ABOUT US",
   leftContent: <LeftContent />,
+  pageClass: "about_us_1",
 };
 export default about1;

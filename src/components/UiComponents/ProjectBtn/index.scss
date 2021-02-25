@@ -1,0 +1,13 @@
+@import '../../../static/styles/mixins&vars';
+
+.project_btn{
+@include hover_border;
+ width: 80px;
+ height: 80px;
+ border-radius: 50%;
+ background-color: #FFF5F5;
+ position: absolute;
+ right: 160px;
+ top: 15px;
+ z-index: 20;
+}

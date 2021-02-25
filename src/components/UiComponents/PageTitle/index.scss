@@ -7,4 +7,15 @@
     writing-mode: tb-rl;
    padding: 10px 3px 10px 0 ;
    background-color: #fff;
+   z-index: 5;
+}
+@media(max-height:850px){
+    .page_title{
+        font-size: 45px;
+    }
+}
+@media(max-width:1200px){
+    .page_title{
+        font-size: 45px;
+    }
 }

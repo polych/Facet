@@ -47,5 +47,6 @@ const forCreatorsPage = {
   pageTitle: "FOR CREATORS",
   leftContent: <LeftContent />,
   rightContent: <RightContent />,
+  pageClass: "for_creators_page",
 };
 export default forCreatorsPage;

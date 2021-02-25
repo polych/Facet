@@ -54,6 +54,7 @@ const LandingPage = () => {
         leftContent={landingPages[page].leftContent}
         pageTitle={landingPages[page].pageTitle}
         rightContent={landingPages[page].rightContent}
+        pageClass={landingPages[page].pageClass}
       />
     </div>
   );
