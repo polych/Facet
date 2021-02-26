@@ -1,6 +1,6 @@
 import { CHANGE_LP_PAGE, MENU_STATE, SHOW_PROJECTS } from "../constans";
 const initState = {
-  lpPage: 4,
+  lpPage: 0,
   menu: false,
   projectSection: false,
 };

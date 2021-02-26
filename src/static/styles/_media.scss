@@ -153,6 +153,10 @@
 }
 }
 @media(max-width:575.9px){
+    .p_20{
+        height: calc(var(--vh, 1vh) * 100);
+        background-color: green;
+    }
     h1{
         font-size: 35px;
     }
@@ -184,7 +188,7 @@
         padding-bottom: 0;
     }
     .how_works{
-        padding-top: 50px;
+        padding-top: 20px;
         &_rows{
             margin-left: -30px;
         }
@@ -256,4 +260,17 @@
             padding-left: 10px;
         }
     }
+    .overflow_wrap{
+        padding-bottom: 20px;
+    }
+    .about_us_2{
+        .overflow_wrap{
+            max-height: calc(100vh - 272px);
+        }
+    }
+    .about_right_img{
+        width: 80px;
+        height: 80px;
+    }
+
 }

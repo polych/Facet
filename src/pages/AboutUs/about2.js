@@ -2,7 +2,7 @@ import React from "react";
 import photo from "../../static/images/photo.png";
 const LeftContent = () => {
   return (
-    <pre>
+    <pre className="wrap_mob">
       “At Facet, we believe investors should have a transparent way of investing
       into film and TV content. We also believe creators should have access to
       alternative ways of raising funds. We are excited we can deliver what

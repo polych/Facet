@@ -2,7 +2,7 @@ import React from "react";
 
 const LeftContent = () => {
   return (
-    <pre>
+    <pre className="wrap_mob">
       Entertainment sits at the centre of our daily lives.
       <br />
       <br />
