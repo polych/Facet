@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Facet/static/css/main.2ed7c5a4.chunk.css",
+    "main.css": "/Facet/static/css/main.b36214cd.chunk.css",
     "main.js": "/Facet/static/js/main.4e5e5cf3.chunk.js",
     "main.js.map": "/Facet/static/js/main.4e5e5cf3.chunk.js.map",
     "runtime-main.js": "/Facet/static/js/runtime-main.de4de0f9.js",
@@ -8,9 +8,9 @@
     "static/js/2.9c6c408f.chunk.js": "/Facet/static/js/2.9c6c408f.chunk.js",
     "static/js/2.9c6c408f.chunk.js.map": "/Facet/static/js/2.9c6c408f.chunk.js.map",
     "index.html": "/Facet/index.html",
-    "precache-manifest.8a27260ea922ddb10f84a4d95e62662e.js": "/Facet/precache-manifest.8a27260ea922ddb10f84a4d95e62662e.js",
+    "precache-manifest.931f8d376ab74c08775ceeb96a06929b.js": "/Facet/precache-manifest.931f8d376ab74c08775ceeb96a06929b.js",
     "service-worker.js": "/Facet/service-worker.js",
-    "static/css/main.2ed7c5a4.chunk.css.map": "/Facet/static/css/main.2ed7c5a4.chunk.css.map",
+    "static/css/main.b36214cd.chunk.css.map": "/Facet/static/css/main.b36214cd.chunk.css.map",
     "static/js/2.9c6c408f.chunk.js.LICENSE.txt": "/Facet/static/js/2.9c6c408f.chunk.js.LICENSE.txt",
     "static/media/general.scss": "/Facet/static/media/Comfortaa-SemiBold.d905de65.ttf",
     "static/media/a.svg": "/Facet/static/media/a.93bf8ed0.svg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.de4de0f9.js",
     "static/js/2.9c6c408f.chunk.js",
-    "static/css/main.2ed7c5a4.chunk.css",
+    "static/css/main.b36214cd.chunk.css",
     "static/js/main.4e5e5cf3.chunk.js"
   ]
 }
