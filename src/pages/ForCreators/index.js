@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import TabsComp from "../../components/UiComponents/Tabs";
 
 const nav = [
@@ -41,7 +42,9 @@ const LeftContent = () => {
   );
 };
 const RightContent = () => (
-  <button className="btn_1">Send us your application</button>
+  <Link to="/contact" className="btn_1">
+    Send us your application
+  </Link>
 );
 const forCreatorsPage = {
   pageTitle: "FOR CREATORS",

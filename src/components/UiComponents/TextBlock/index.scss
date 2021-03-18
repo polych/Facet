@@ -1,0 +1,12 @@
+.text_block{
+    p,pre{
+        margin-top: 30px;
+    }
+    &.text_12{
+        width: 100%;
+    }
+    &.text_6{
+        width: 50%;
+        max-width: 350px;
+    }
+}

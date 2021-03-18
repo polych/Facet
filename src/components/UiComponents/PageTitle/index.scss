@@ -9,9 +9,11 @@
    background-color: #fff;
    z-index: 5;
 }
-@media(max-height:850px){
+@media(max-height:860px){
     .page_title{
-        font-size: 45px;
+        font-size: 40px;
+        top: 50px;
+
     }
 }
 @media(max-width:1200px){

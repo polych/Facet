@@ -44,6 +44,9 @@ $border: 2px dashed $border_color;
            border-radius: 50%;
         }
     }
+    &:active{
+        background-color: #FF6D6D;
+    }
 }
 @mixin hover_border {
     position: relative;
@@ -67,4 +70,18 @@ $border: 2px dashed $border_color;
     width: 16px;
     height: 16px;
     border-radius: 50%;
+  }
+  @mixin bg_circle {
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        background-color: #FFE2E2;
+        content: '';
+        position: absolute;
+  }
+  @mixin img_cover{
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
   }

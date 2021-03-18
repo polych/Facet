@@ -1,4 +1,4 @@
-import { CHANGE_LP_PAGE, MENU_STATE, SHOW_PROJECTS } from "../constans";
+import { CHANGE_LP_PAGE, ERROR, MENU_STATE, SHOW_PROJECTS } from "../constans";
 const initState = {
   lpPage: 0,
   menu: false,
@@ -21,6 +21,11 @@ const generalReducer = (state = initState, action) => {
       return {
         ...state,
         projectSection: action.payload,
+      };
+    case ERROR:
+      return {
+        ...state,
+        error: action.payload,
       };
     default:
       return state;

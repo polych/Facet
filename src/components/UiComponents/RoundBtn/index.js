@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./index.scss";
 
 const RoundBtn = ({ value, className }) => {
   return (
-    <button type="button" className={className}>
+    <Link className={className} to="/contact">
       {value}
-    </button>
+    </Link>
   );
 };
 

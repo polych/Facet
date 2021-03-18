@@ -1,18 +1,14 @@
 import {
   CHANGE_LP_PAGE,
-  SET_WINDOW_WIDTH,
   MENU_STATE,
   SHOW_PROJECTS,
+  PROJECTS_REQUEST,
+  ERROR,
 } from "../constans";
 
 export const changeLpPage = (page) => ({
   type: CHANGE_LP_PAGE,
   payload: page,
-});
-
-export const setWindowWidth = (width) => ({
-  type: SET_WINDOW_WIDTH,
-  payload: width,
 });
 
 export const menuAction = (val) => ({
@@ -22,4 +18,12 @@ export const menuAction = (val) => ({
 export const showProjects = (val) => ({
   type: SHOW_PROJECTS,
   payload: val,
+});
+export const fetchProjects = (val) => ({
+  type: PROJECTS_REQUEST,
+});
+
+export const errorAction = () => ({
+  type: ERROR,
+  payload: null,
 });

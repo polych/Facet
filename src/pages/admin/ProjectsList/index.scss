@@ -1,0 +1,52 @@
+.ad_poj_list{
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.ad_proj_item{
+    margin: 10px;
+    border: 1px solid #999;
+    padding: 20px;
+    min-width: 350px;
+    min-height: 300px;
+    .just_center{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        }
+    h5{
+       text-align: center;
+       margin-top: 20px;
+      
+    }
+    &_btns{
+        margin-top: 30px;
+        button,a{
+            display: block;
+            padding: 10px 30px;
+            height: 40px;
+            color: #fff;
+            &:hover{
+                background-color: #FF6D6D;
+            }
+         }
+         a{
+                background-color: #333;
+         }
+         button{
+             background-color: #BEBEBE;
+         }
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+    }
+    
+}
+.ad_proj_item_new{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

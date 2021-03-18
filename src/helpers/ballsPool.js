@@ -1,7 +1,7 @@
 import Matter from "matter-js";
-import a from "../static/images/a.svg";
+import defaultImg from "../static/images/a.svg";
 
-const ballPool = (scene) => {
+const ballPool = (scene, history, projects) => {
   const windowWidth = window.innerWidth;
   const wrapWidth = scene.current.offsetWidth;
   const wrapHeight = scene.current.offsetHeight;
@@ -102,17 +102,20 @@ const ballPool = (scene) => {
       restitution: balRes,
       render: {
         sprite: {
-          texture: a,
+          texture: defaultImg,
         },
       },
     },
   ];
   let balls = [];
-  for (let index = 0; index < 15; index++) {
-    balls.push(Bodies.circle(...ballConfig));
-  }
-  balls.forEach((el, index) => (el.val = `value of ball ${index}`));
-
+  let arr = Object.keys(projects);
+  let arr2 = [...ballConfig];
+  arr.forEach((el, index) => {
+    const img = projects[el] ? projects[el].images.mainImg : defaultImg;
+    arr2[3].render.sprite.texture = img;
+    balls.push(Bodies.circle(...arr2));
+    balls[index].val = el;
+  });
   const wallConfig = {
     isStatic: true,
     render: {
@@ -149,9 +152,9 @@ const ballPool = (scene) => {
   });
   Matter.Events.on(mouseConstraint, "mousedown", function (event) {
     const bodies = engine.world.bodies;
-    bodies.forEach((el) => {
+    return bodies.forEach((el) => {
       if (Matter.Bounds.contains(el.bounds, mouseConstraint.mouse.position)) {
-        console.log(el.val);
+        return history.push(`/project/${el.val}`);
       }
     });
   });

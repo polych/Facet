@@ -76,7 +76,7 @@
         background-color: #fff;
         width: calc(100% - 3px);
         z-index: 10;
-        height: calc(100% - 2px);
+        height: calc((var(--vh, 1vh) * 100) - 33px);
         position: absolute;
         bottom: 1px;
         left: 1px;
@@ -155,7 +155,6 @@
 @media(max-width:575.9px){
     .p_20{
         height: calc(var(--vh, 1vh) * 100);
-        background-color: green;
     }
     h1{
         font-size: 35px;
@@ -260,17 +259,43 @@
             padding-left: 10px;
         }
     }
-    .overflow_wrap{
-        padding-bottom: 20px;
-    }
+  
     .about_us_2{
         .overflow_wrap{
-            max-height: calc(100vh - 272px);
+            max-height: calc((var(--vh, 1vh) * 100) - 272px);
+            padding-bottom: 10px;
         }
     }
     .about_right_img{
         width: 80px;
         height: 80px;
     }
-
+    .about_us_2{
+        .overflow_wrap p{
+            padding-bottom: 30px;
+        }
+    }
+    .about_us_1{
+        .overflow_wrap pre{
+            padding-bottom: 10px;
+        }
+    }
+    .projects_list{
+        display: flex;
+        align-items: flex-end;
+        display: -webkit-flex;
+        align-items: center;
+        -webkit-align-items: flex-end;
+        .canv{
+            position: relative;
+            height: calc((var(--vh, 1vh) * 100) - 100px);
+            width: 100%;
+            canvas{
+                height: calc((var(--vh, 1vh) * 100) - 100px);
+            }
+        }
+    }
+    .input_field_wrap{
+        margin-bottom: 30px;
+    }
 }

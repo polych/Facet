@@ -1,0 +1,100 @@
+.project_admin{
+    .input_field{
+        background: transparent;
+        height: auto;
+    }
+    input{
+        background-color: transparent;
+        font-size: 14px;
+        border-bottom: 1px solid #999999;
+        width: 100%;
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+    }
+    textarea{
+        border-bottom: 1px solid #999999;
+        width: 100%;
+        background-color: transparent;
+    }
+    .image_input{
+        border: 1px solid  #999999;
+        display: flex;
+        input{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .max_500,.max_600{
+        width: 500px;
+    }
+    .width_50{
+        width: calc(50% - 30px);
+    }
+    h1{
+        input,textarea{
+            font-size: 65px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+    h2{
+        input,textarea{
+            font-size: 60px;
+        }
+    }
+    h3{
+        input,textarea{
+            font-size: 35px;
+
+        }
+    }
+    h4{
+        input,textarea{
+            font-size: 26px;
+            height: auto;
+        }
+    }
+    h5{
+        input,textarea{
+            font-size: 20px;
+            height: auto;
+        }
+    }
+   .block_imgs,footer{
+       input,textarea{
+           color: #fff;
+            &::placeholder{
+               color: #fff;
+           }
+       }
+   }
+   .text_flow_2_add_info{
+       right: 0;
+       bottom: calc(-100% + 100px);
+   }
+   .text_flow_2_add_info p{
+       width: 260px;
+   }
+   .block_imgs_big .image_input{
+    height: 700px;
+}
+    .text_flow_2 > div{
+        margin: 0 10px;
+        margin-bottom: 50px;
+
+    }
+    .iveste_form{
+        margin-top: 100px;
+    }
+}
+.ad_main_img{
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #999999;
+    display: block;
+    margin-bottom: 150px;
+    text-align: center;
+}

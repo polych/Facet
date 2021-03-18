@@ -31,10 +31,17 @@
     font-size: 14px;
     font-weight: normal;
     color: $text_color;
-    overflow: hidden;
     *{
       font-family: "Comfortaa', sans-serif";
       font-weight: normal;
+        -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        scrollbar-width: none;  /* Firefox */
+      &:-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+    }
+    a{
+      color: #212121;
     }
 }
 h1{
@@ -69,6 +76,21 @@ h5{
     transform: rotate(-45deg);
     width: 100%
 }
+.d_flex{
+  display: flex;
+}
+.align_center{
+  display: flex;
+  align-items: center;
+}
+.just_center{
+  display: flex;
+  justify-content: center;
+}
+.just_btwn{
+  display: flex;
+  justify-content: space-between;
+}
 .list_style{
   li{
     position: relative;
@@ -101,6 +123,16 @@ h5{
   border-top: 11px solid #FF6D6D;
   transition: all 0.3s ease-in-out;
 }
-
+.scale_arr{
+  transform: scale(-1,1);
+}
+.log_out{
+  position: absolute !important;
+  right:20px;
+  top:20px;
+  font-size: 12px;
+  background-color: #FFE2E2;
+  z-index:100;
+}
 
 @import './media';

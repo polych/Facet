@@ -2,7 +2,7 @@ import React from "react";
 import photo from "../../static/images/photo.png";
 const LeftContent = () => {
   return (
-    <pre className="wrap_mob">
+    <p>
       “At Facet, we believe investors should have a transparent way of investing
       into film and TV content. We also believe creators should have access to
       alternative ways of raising funds. We are excited we can deliver what
@@ -22,7 +22,7 @@ const LeftContent = () => {
       <br />
       She holds an MBA from INSEAD and an MSc and MEng from Imperial College
       London.
-    </pre>
+    </p>
   );
 };
 const AboutRight = () => (

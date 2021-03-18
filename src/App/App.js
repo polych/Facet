@@ -1,21 +1,34 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import { useSelector } from "react-redux";
 import LandingPage from "../pages/LandingPage";
 import Logo from "../components/UiComponents/Logo";
-import { useDispatch } from "react-redux";
-import { setWindowWidth } from "../store/actions/generalAction";
+import ContactUs from "../pages/ContactUs";
+import Project from "../pages/Project";
+import SignIn from "../pages/admin/SignIn";
+import LogOut from "../components/UiComponents/LogOut";
+import Admin from "../pages/admin";
+import Error from "../components/UiComponents/Error";
 
-function App() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(setWindowWidth(window.innerWidth));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+const App = () => {
+  const {
+    firebase: { auth },
+    general: { error },
+  } = useSelector((state) => state);
   return (
     <div className="app">
       <Logo />
-      <LandingPage />
+      {error && <Error error={error} />}
+      {!auth.isEmpty && <LogOut />}
+      <Switch>
+        <Route path="/contact" component={ContactUs} />
+        <Route path="/project/:id" component={Project} />
+        <Route exact={true} path="/" component={LandingPage} />
+        <Route path="/admin" component={Admin} />
+        <Route exact={false} path="/signin" component={SignIn} />
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;

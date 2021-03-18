@@ -42,13 +42,16 @@
 }
 .right_content{
     border-radius: 50%;
-    background-color: rgba($color: #FFF5F5, $alpha: 0.65);
+    background-color:#FFE2E2;
     width: 470px;
     height: 470px;
     padding: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
+   
 }
 .right_content_wrap{
     position: absolute;
@@ -60,6 +63,16 @@
         right: -100px;
         top: -20px;
     }
+    &:after{
+        content:'';
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: #F1F1F1;
+        position: absolute;
+        top: -70px;
+        left: 20px;
+    }
 }
 .left_content{
     width: 50%;
@@ -67,16 +80,15 @@
     // overflow-y: scroll;
     position: relative;
     z-index: 5;
-    // height: fit-content;
-    // height: -moz-fit-content;  
-    // height: -webkit-fit-content;
+    padding-bottom: 20px;
     &::after{
+        display: none;
         content:'';
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 50px;
+        height: 30px;
         background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 34%, rgba(255,253,253,1) 97%);
     }
 }
@@ -138,6 +150,12 @@
         font-size: 12px;
         &_wrap{
             right: 80px;
+            &:after{
+                width: 200px;
+                height: 200px;
+                top: -50px;
+                left:20px;
+            }
         }
     }
 }
@@ -173,6 +191,11 @@
         padding: 0;
         .btn_1{
            display: none;
+        }
+        &_wrap{
+            &::after{
+                display: none;
+            }
         }
     }
   .get_touch{

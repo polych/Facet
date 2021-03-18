@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import Menu from "../Menu";
 import Projects from "../Projects";
@@ -9,6 +11,7 @@ import RoundBtn from "../UiComponents/RoundBtn";
 import "./index.scss";
 
 const PageWraper = ({ leftContent, rightContent, pageTitle, pageClass }) => {
+  const { isEmpty } = useSelector((state) => state.firebase.auth);
   return (
     <div className="p_20">
       <div className={`page_wraper ${pageClass ? pageClass : ""}`}>
@@ -48,14 +51,20 @@ const PageWraper = ({ leftContent, rightContent, pageTitle, pageClass }) => {
               </SwitchTransition>
             </div>
           </div>
-          <RoundBtn value="get in touch" className="big_btn get_touch" />
+          {isEmpty ? (
+            <RoundBtn value="get in touch" className="big_btn get_touch" />
+          ) : (
+            <Link to="/admin" className="big_btn get_touch">
+              Admin
+            </Link>
+          )}
           <SwitchTransition>
             <CSSTransition
               classNames="fade"
               addEndListener={(node, done) =>
                 node.addEventListener("transitionend", done, false)
               }
-              key={pageTitle}
+              key={pageTitle + rightContent}
             >
               <PageTitle title={pageTitle} />
             </CSSTransition>
