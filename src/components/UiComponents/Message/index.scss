@@ -1,0 +1,17 @@
+.message{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 222;
+    padding: 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 12px;
+    max-width: 250px;
+    &_error{
+        background-color: #FF6D6D;
+    }
+    &_succes{
+        background-color: rgb(30, 123, 30)
+    }
+}

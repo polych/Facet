@@ -2,8 +2,8 @@ import {
   CHANGE_LP_PAGE,
   MENU_STATE,
   SHOW_PROJECTS,
-  PROJECTS_REQUEST,
-  ERROR,
+  MESSAGE,
+  ADD_MESSAGE,
 } from "../constans";
 
 export const changeLpPage = (page) => ({
@@ -19,11 +19,16 @@ export const showProjects = (val) => ({
   type: SHOW_PROJECTS,
   payload: val,
 });
-export const fetchProjects = (val) => ({
-  type: PROJECTS_REQUEST,
+
+export const messageAction = (payload) => ({
+  type: MESSAGE,
+  payload: payload,
 });
 
-export const errorAction = () => ({
-  type: ERROR,
-  payload: null,
+export const addMessage = (values, firestore) => ({
+  type: ADD_MESSAGE,
+  payload: {
+    values,
+    firestore,
+  },
 });

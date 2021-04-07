@@ -108,16 +108,19 @@ const Project = ({ history, match }) => {
         <TextBlock text={titleDescr} />
       </div>
       <div className="container_2">
-        <div className="image_left_capt">
-          <h4>
-            <pre>{text1}</pre>
-          </h4>
-          {img1 && (
-            <div className="image_left_capt_img">
-              <img src={`${img1}`} alt="" />
+        {!!text1 ||
+          (!!img1 && (
+            <div className="image_left_capt">
+              <h4>
+                <pre>{text1}</pre>
+              </h4>
+              {img1 && (
+                <div className="image_left_capt_img">
+                  <img src={`${img1}`} alt="" />
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          ))}
         {text2 || text3 ? (
           <div className="circle_info">
             <h3>
@@ -169,85 +172,97 @@ const Project = ({ history, match }) => {
         </div>
       </div>
 
-      <div className="block_imgs">
-        <div className="just_btwn">
-          <div className="two_sm_img">
-            {img2 && (
-              <div>
-                <img src={img2} alt="" />
+      {!!img2 ||
+        !!img3 ||
+        !!img4 ||
+        (!!img5 && (
+          <div className="block_imgs">
+            <div className="just_btwn">
+              <div className="two_sm_img">
+                {img2 && (
+                  <div>
+                    <img src={img2} alt="" />
+                  </div>
+                )}
+                {img3 && (
+                  <div>
+                    <img src={img3} alt="" />
+                  </div>
+                )}
               </div>
-            )}
-            {img3 && (
-              <div>
-                <img src={img3} alt="" />
-              </div>
-            )}
-          </div>
 
-          <div className="sm_img_cations">
-            {img4 && (
-              <div className="sm_img_right">
-                <img src={img4} alt="" />
+              <div className="sm_img_cations">
+                {img4 && (
+                  <div className="sm_img_right">
+                    <img src={img4} alt="" />
+                  </div>
+                )}
+                <h3>
+                  <pre>{text18}</pre>
+                </h3>
+              </div>
+            </div>
+            {img5 && (
+              <div className="block_imgs_big">
+                <img src={img5} alt="" />
               </div>
             )}
-            <h3>
-              <pre>{text18}</pre>
-            </h3>
           </div>
-        </div>
-        {img5 && (
-          <div className="block_imgs_big">
-            <img src={img5} alt="" />
+        ))}
+      {!!text20 ||
+        (!!text19 && (
+          <div className="block_4">
+            <div className="container">
+              <div className="circle_bg"></div>
+              <div className="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div className="max_600">
+                <TextBlock text={text20} title={text19} />
+              </div>
+            </div>
           </div>
-        )}
-      </div>
-      <div className="block_4">
-        <div className="container">
-          <div className="circle_bg"></div>
-          <div className="lines">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+        ))}
+      {!!img6 ||
+        (!!img7 && (
+          <div className="block_imgs_2">
+            {img6 && (
+              <div>
+                <img src={img6} alt="" />
+              </div>
+            )}
+            {img7 && (
+              <div>
+                <img src={img7} alt="" />
+              </div>
+            )}
           </div>
-          <div className="max_600">
-            <TextBlock text={text20} title={text19} />
-          </div>
-        </div>
-      </div>
-      <div className="block_imgs_2">
-        {img6 ? (
-          <div>
-            <img src={img6} alt="" />
-          </div>
-        ) : (
-          <></>
-        )}
-        {img7 && (
-          <div>
-            <img src={img7} alt="" />
-          </div>
-        )}
-      </div>
+        ))}
 
       <div className="container">
-        {textFlow2.length > 0 && (
-          <div className="text_flow_2">
-            {textFlow2.map((el) => (
-              <TextBlock title={el.title} text={el.text} key={el.key} />
-            ))}
-            {text31 && (
-              <div
-                className={`text_flow_2_add_info ${
-                  textFlow2.length % 2 === 0 ? "text_flow_2_add_info_stat" : ""
-                }`}
-              >
-                <pre>{text31}</pre>
-              </div>
-            )}
-          </div>
-        )}
+        {!!textFlow2[0].text ||
+          (textFlow2[0].title && (
+            <div className="text_flow_2">
+              {textFlow2.map((el) => (
+                <TextBlock title={el.title} text={el.text} key={el.key} />
+              ))}
+              {text31 && (
+                <div
+                  className={`text_flow_2_add_info ${
+                    textFlow2.length % 2 === 0
+                      ? "text_flow_2_add_info_stat"
+                      : ""
+                  }`}
+                >
+                  <pre>{text31}</pre>
+                </div>
+              )}
+            </div>
+          ))}
       </div>
       <footer>
         <div className="container_2">

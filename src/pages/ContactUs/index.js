@@ -2,28 +2,35 @@ import React from "react";
 import "./index.scss";
 import {
   emailObj,
-  firstNameObj,
+  nameObj,
   phoneNumberObj,
   messageObj,
   statusCreatorObj,
   statusInvestorObj,
 } from "../../helpers/FormObjects";
 import Form from "../../components/UiComponents/Form";
+import { useDispatch } from "react-redux";
+import { useFirestore } from "react-redux-firebase";
+import { addMessage } from "../../store/actions/generalAction";
 
 const initValues = {
-  firstName: "",
-  password: "",
+  name: "",
   email: "",
   phoneNumber: "",
   message: "",
   status: "",
 };
-const fields = [firstNameObj, emailObj, phoneNumberObj, messageObj];
+const fields = [nameObj, emailObj, phoneNumberObj];
 const radioBtns = [statusCreatorObj, statusInvestorObj];
-
+const textAreas = [messageObj];
 const ContactUs = (props) => {
+  const dispatch = useDispatch();
+  const firestore = useFirestore();
   const handleClick = () => {
     return props.history.goBack();
+  };
+  const handleSubmit = (values) => {
+    dispatch(addMessage(values, firestore));
   };
   return (
     <div className="contact_page">
@@ -37,6 +44,8 @@ const ContactUs = (props) => {
           initValues={initValues}
           submitValue="send"
           radioBtns={radioBtns}
+          textAreas={textAreas}
+          submitFunc={handleSubmit}
         />
       </div>
     </div>

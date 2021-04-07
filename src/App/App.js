@@ -8,17 +8,17 @@ import Project from "../pages/Project";
 import SignIn from "../pages/admin/SignIn";
 import LogOut from "../components/UiComponents/LogOut";
 import Admin from "../pages/admin";
-import Error from "../components/UiComponents/Error";
+import Message from "../components/UiComponents/Message";
 
 const App = () => {
   const {
     firebase: { auth },
-    general: { error },
+    general: { message },
   } = useSelector((state) => state);
   return (
     <div className="app">
       <Logo />
-      {error && <Error error={error} />}
+      {message && message.text && <Message message={message} />}
       {!auth.isEmpty && <LogOut />}
       <Switch>
         <Route path="/contact" component={ContactUs} />

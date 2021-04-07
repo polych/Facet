@@ -1,8 +1,17 @@
-import { CHANGE_LP_PAGE, ERROR, MENU_STATE, SHOW_PROJECTS } from "../constans";
+import {
+  CHANGE_LP_PAGE,
+  MENU_STATE,
+  MESSAGE,
+  SHOW_PROJECTS,
+} from "../constans";
 const initState = {
   lpPage: 0,
   menu: false,
   projectSection: false,
+  message: {
+    type: null,
+    text: null,
+  },
 };
 const generalReducer = (state = initState, action) => {
   switch (action.type) {
@@ -22,10 +31,13 @@ const generalReducer = (state = initState, action) => {
         ...state,
         projectSection: action.payload,
       };
-    case ERROR:
+    case MESSAGE:
       return {
         ...state,
-        error: action.payload,
+        message: {
+          type: action.payload.type,
+          text: action.payload.text,
+        },
       };
     default:
       return state;

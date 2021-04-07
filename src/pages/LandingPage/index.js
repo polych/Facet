@@ -6,10 +6,12 @@ import PageWraper from "../../components/PageWraper";
 import landingPages from "../../pages";
 import { changeLpPage } from "../../store/actions/generalAction";
 import { viewHeight } from "../../helpers/general";
+import { nextPage, prevPage } from "../../helpers/sroll";
 const LandingPage = () => {
   const dispatch = useDispatch();
   const page = useSelector((state) => state.general.lpPage);
   const ref = useRef(null);
+
   const updateScroll = (event, eventName, position) => {
     let wrapper;
     wrapper = document.getElementsByClassName("overflow_wrap");
@@ -28,7 +30,13 @@ const LandingPage = () => {
       top = element[0].scrollTop;
       scrollToEnd = top + height;
     }
-
+    const ff = (next) => {
+      if (next === "next") {
+        dispatch(changeLpPage(page + 1));
+      } else {
+        dispatch(changeLpPage(page - 1));
+      }
+    };
     if (eventName === "touchmove") {
       if (position === 1 && page !== 6) {
         if (element.length < 1 || scrollToEnd >= fullHeight) {
@@ -42,18 +50,14 @@ const LandingPage = () => {
       }
     } else {
       if (event.deltaY > 0 && page !== 6) {
-        if (element.length < 1 || scrollToEnd >= fullHeight) {
-          dispatch(changeLpPage(page + 1));
-        }
+        nextPage(element, scrollToEnd, fullHeight, height, ff);
       }
       if (event.deltaY < 0 && page !== 0) {
-        if (element.length < 1 || top <= 0) {
-          dispatch(changeLpPage(page - 1));
-        }
+        prevPage(element, top, fullHeight, height, ff);
       }
     }
   };
-  const debounced = useDebouncedCallback(updateScroll, 80);
+  const debounced = useDebouncedCallback(updateScroll, 100);
 
   useEffect(() => {
     const event = window.innerWidth >= 1200 ? "wheel" : "touchmove";

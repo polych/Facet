@@ -20,7 +20,6 @@ const ContactUs = (props) => {
     return props.history.goBack();
   };
   const handleSubmit = (values) => {
-    console.log(values);
     dispatch(
       loginRequest({
         firebase,

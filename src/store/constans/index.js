@@ -1,15 +1,13 @@
 export const CHANGE_LP_PAGE = "CHANGE_LP_PAGE";
 export const MENU_STATE = "MENU_STATE";
-export const ERROR = "ERROR";
-export const PROJECTS_REQUEST = "PROJECTS_REQUEST";
-export const PROJECTS_ERR = "PROJECTS_ERR";
-export const PROJECTS_SUCCES = "PROJECTS_SUCCES";
-
 export const SHOW_PROJECTS = "SHOW_PROJECTS";
-export const PROJECT_PREV = "PROJECT_PREV";
+export const MESSAGE = "MESSAGE";
+export const ADD_MESSAGE = "ADD_MESSAGE";
+
 export const LOGIN_REQUEST = "LOGIN_REQUEST";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGOUT_REQUEST = "LOGOUT_REQUEST";
+
 export const CREATE_PROJECT = "CREATE_PROJECT";
 export const DELETE_REQUEST = "DELETE_REQUEST";
 export const EDIT_REQUEST = "EDIT_REQUEST";

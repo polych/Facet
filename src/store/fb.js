@@ -1,9 +1,9 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyA3ZYeAcrlri49WCyeNky8uCosxRz5-K8s",
-  authDomain: "facedtrial.firebaseapp.com",
-  databaseURL: "https://facedtrial-default-rtdb.firebaseio.com",
-  projectId: "facedtrial",
-  storageBucket: "facedtrial.appspot.com",
-  messagingSenderId: "23605482740",
-  appId: "1:23605482740:web:22e782d4360fd39065baa1",
+  apiKey: "AIzaSyDUSExMk4MAoxiuQldEHM8DImNY1Fw4CmE",
+  authDomain: "facet-4b041.firebaseapp.com",
+  projectId: "facet-4b041",
+  storageBucket: "facet-4b041.appspot.com",
+  messagingSenderId: "92498424909",
+  appId: "1:92498424909:web:220b55b19882a514be5804",
+  measurementId: "G-82R5BNFN26",
 };

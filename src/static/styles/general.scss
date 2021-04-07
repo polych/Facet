@@ -111,6 +111,7 @@ h5{
 }
 .btn_1{
   @include round_btn;
+  text-align: center;
   &:after{
     border-width: 2px !important;
   }

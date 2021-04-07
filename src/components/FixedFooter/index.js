@@ -3,14 +3,9 @@ import Facebook from "../icons/Facebook";
 import Inst from "../icons/Inst";
 import Twitter from "../icons/Twitter";
 import RoundBtn from "../UiComponents/RoundBtn";
+
 const FixedFooter = ({ invested, needToInvest }) => {
   const InwestedProgress = (invested * 100) / needToInvest;
-  // let width = 0;
-  // const InwestedProgress = () => {
-  //   setTimeout(() => {
-  //     width = (invested * 100) / needToInvest;
-  //   }, 1000);
-  // };
   return (
     <div className="fixed_footer">
       <div className="invested">

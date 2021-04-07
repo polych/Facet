@@ -1,5 +1,5 @@
 import { put } from "redux-saga/effects";
-import { LOGIN_SUCCESS, ERROR } from "../constans";
+import { LOGIN_SUCCESS, MESSAGE } from "../constans";
 
 export function* login({ payload }) {
   try {
@@ -11,19 +11,25 @@ export function* login({ payload }) {
   } catch (error) {
     console.log(error);
     yield put({
-      type: ERROR,
-      payload: error.message,
+      type: MESSAGE,
+      payload: {
+        type: "err",
+        text: error.message,
+      },
     });
   }
 }
 export function* logOut({ payload }) {
   try {
-    const response = yield payload.logout();
+    yield payload.logout();
   } catch (error) {
     console.log(error);
     yield put({
-      type: ERROR,
-      payload: error.message,
+      type: MESSAGE,
+      payload: {
+        type: "err",
+        text: error.message,
+      },
     });
   }
 }
@@ -58,11 +64,15 @@ export function* createProject({
   } catch (error) {
     console.log(error);
     yield put({
-      type: ERROR,
-      payload: error.message,
+      type: MESSAGE,
+      payload: {
+        type: "err",
+        text: error.message,
+      },
     });
   }
 }
+
 export function* editProject({
   payload: { values, firestore, firebase, projId, history },
 }) {
@@ -90,14 +100,17 @@ export function* editProject({
   } catch (error) {
     console.log(error);
     yield put({
-      type: ERROR,
-      payload: error.message,
+      type: MESSAGE,
+      payload: {
+        type: "err",
+        text: error.message,
+      },
     });
   }
 }
 export function* deleteProject({ payload: { id, firestore, firebase } }) {
   try {
-    const responce = yield firestore.collection("projects").doc(id).delete();
+    yield firestore.collection("projects").doc(id).delete();
     const stor = firebase.storage().ref();
     const folder = stor.child(`/images/`).child(id);
     folder.listAll().then((result) => {
@@ -108,8 +121,11 @@ export function* deleteProject({ payload: { id, firestore, firebase } }) {
   } catch (error) {
     console.log(error);
     yield put({
-      type: ERROR,
-      payload: error.message,
+      type: MESSAGE,
+      payload: {
+        type: "err",
+        text: error.message,
+      },
     });
   }
 }

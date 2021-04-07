@@ -1,19 +1,24 @@
-import { call, put } from "redux-saga/effects";
-import { PROJECTS_SUCCES, ERROR } from "../constans";
-import API from "../Api";
+import { put } from "redux-saga/effects";
+import { MESSAGE } from "../constans";
 
-export function* fetchProjects(action) {
+export function* addMessage({ payload: { values, firestore } }) {
   try {
-    const response = yield call(API.getProjects);
+    yield firestore.collection("messages").add(values);
     yield put({
-      type: PROJECTS_SUCCES,
-      payload: response.data,
+      type: MESSAGE,
+      payload: {
+        type: "",
+        text: "Your request has been sent",
+      },
     });
   } catch (error) {
     console.log(error);
     yield put({
-      type: ERROR,
-      payload: error.message,
+      type: MESSAGE,
+      payload: {
+        type: "err",
+        text: error.message,
+      },
     });
   }
 }
